@@ -520,16 +520,16 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                 
             </div>
             <h1>Feature:
-                <small>Make an order with user online</small>
+                <small>Create an order and receive a notification with user offline</small>
             </h1>
             <p>
-                <strong>Description: </strong>   Test that an order transaction result is received online </p>
+                <strong>Description: </strong>   Test that an order transaction result is received as a notification </p>
             
            <p><strong>File name:</strong>
-                ordersWithoutNotification.feature
+                ordersWithNotification.feature
             </p>
             <p><strong>Relative path:</strong>
-                ordersWithoutNotification.feature</p>
+                ordersWithNotification.feature</p>
         </div>
 
         <div class="clearfix"></div>
@@ -717,7 +717,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Order received online</small></h2>
+                <h2>Scenario: <small>Order received as notification</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -734,7 +734,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -935,10 +935,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Then </span>
+                                    <span class="keyword highlight">When </span>
 
                                     
-                                        all the steps are green
+                                        user closes before get a response
                                         
                                     
 
@@ -996,7 +996,65 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        no notification is sent
+                                        after 5 seconds, should receive a 'finished' notification
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        mongo status should be restaurant: 0, rider: 0, payment: 0
                                         
                                     
 
@@ -1054,7 +1112,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Restaurant service rejects online</small></h2>
+                <h2>Scenario: <small>Restaurant service rejects as notification</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1071,7 +1129,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1272,10 +1330,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Then </span>
+                                    <span class="keyword highlight">When </span>
 
                                     
-                                        'restaurant' step is red
+                                        user closes before get a response
                                         
                                     
 
@@ -1333,7 +1391,65 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        no notification is sent
+                                        after 5 seconds, should receive a 'restaurant rejected' notification
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        mongo status should be restaurant: 4, rider: -1, payment: -1
                                         
                                     
 
@@ -1391,7 +1507,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Rider service rejects online</small></h2>
+                <h2>Scenario: <small>Rider service rejects as notification</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1408,7 +1524,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1609,10 +1725,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Then </span>
+                                    <span class="keyword highlight">When </span>
 
                                     
-                                        'rider' step is red
+                                        user closes before get a response
                                         
                                     
 
@@ -1670,7 +1786,65 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        no notification is sent
+                                        after 5 seconds, should receive a 'rider rejected' notification
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        mongo status should be restaurant: 5, rider: 4, payment: -1
                                         
                                     
 
@@ -1728,7 +1902,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Payment service rejects online</small></h2>
+                <h2>Scenario: <small>Payment service rejects as notification</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1745,7 +1919,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1946,10 +2120,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Then </span>
+                                    <span class="keyword highlight">When </span>
 
                                     
-                                        'payment' step is red
+                                        user closes before get a response
                                         
                                     
 
@@ -2007,7 +2181,65 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        no notification is sent
+                                        after 5 seconds, should receive a 'payment rejected' notification
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        mongo status should be restaurant: 5, rider: 5, payment: 4
                                         
                                     
 
