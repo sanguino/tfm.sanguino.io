@@ -1,0 +1,53 @@
+/* @theme cads-theme */
+
+@import 'default';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+  background: #fc9;
+}
+
+section {
+    padding-top: 150px
+}
+section.centered {
+    padding-top: 60px;
+    text-align: center;
+    display:block;
+}
+
+
+
+section.split .cont {
+    margin-top: -50px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "slideheading slideheading"
+        "leftpanel rightpanel";
+}
+section.split h3, 
+section.split .ldiv, 
+section.split .rdiv { border:none }
+section.split .cdiv {
+    grid-area: slideheading;
+    margin-top: -80px;
+}
+section.split .ldiv { grid-area: leftpanel; }
+section.split .rdiv { grid-area: rightpanel; }
+
+section .small {
+    font-size: 0.7em;
+}
+
+section .white * {
+    color:white;
+}
